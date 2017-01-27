@@ -1,0 +1,16 @@
+{
+  "name": "far",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-token-generator": "^2.0.0",
+    "systemjs": "^0.20.2",
+    "systemjs-plugin-babel": "0.0.19"
+  }
+}
