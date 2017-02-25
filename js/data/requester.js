@@ -3,9 +3,9 @@ import { jqueryRequester } from "jquery-requester";
 var requester = (function() {
     const CURRENT_USER_KEY = "current-user";
     const AUTH_TOKEN = "auth-token";
-    const appId = "kid_rJWkfzw6";
-    const appSecret = "9861c3e41b4a41e4976d17e5c48f8e26";
-    const masterSecret = "039e3c57e4474187aa9c5b6d540c13e1";
+    const appId = "kid_ryOQxnRFl";
+    const appSecret = "cadb39eed8ef4d86bcb230484ccf0b80";
+    const masterSecret = "41da989e3d204611aa8411e752e50420";
     var authorizationString = `${appId}:${appSecret}`;
     authorizationString = btoa(authorizationString);
 
@@ -20,13 +20,13 @@ var requester = (function() {
     function registerUserRequest(username, password) {
         const data = { username, password };
         const headers = { Authorization: `Basic ${authorizationString}` };
-        jqueryRequester.post(userUrl, headers, data);
+        return jqueryRequester.post(userUrl, headers, data);
     }
 
     function loginUserRequest(username, password) {
         const data = { username, password };
         const headers = { Authorization: `Basic ${authorizationString}` };
-        jqueryRequester.post(loginUserUrl, headers, data)
+        return jqueryRequester.post(loginUserUrl, headers, data)
             .then((res) => {
                 console.log(res);
                 localStorage.setItem(CURRENT_USER_KEY, res._id);
@@ -38,7 +38,7 @@ var requester = (function() {
         const data = { username, password };
         var authtoken = localStorage.getItem(AUTH_TOKEN);
         const headers = { Authorization: `Kinvey ${authtoken}` };
-        jqueryRequester.post(logoutUserUrl, headers, data)
+        return jqueryRequester.post(logoutUserUrl, headers, data)
             .then(() => {
                 localStorage.removeItem(CURRENT_USER_KEY);
                 localStorage.removeItem(AUTH_TOKEN);

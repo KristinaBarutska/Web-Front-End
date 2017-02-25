@@ -12,6 +12,8 @@ import { controllers } from "controllers";
 
         this.get("#/browse", controllers.browse.all);
 
+        this.get("#/register", controllers.register.all);
+
     });
 
 

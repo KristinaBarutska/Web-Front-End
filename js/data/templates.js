@@ -5,8 +5,6 @@ var templates = (function() {
         cache = {};
 
     function get(name) {
-        console.log("getting template");
-
         var promise = new Promise(function(resolve, reject) {
             if (cache[name]) {
                 resolve(cache[name]);
@@ -19,7 +17,6 @@ var templates = (function() {
                 resolve(template);
             });
         });
-        console.log("getting template");
         return promise;
     }
     return {
