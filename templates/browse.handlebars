@@ -1,9 +1,69 @@
 <div class="container">
+  <form>
+     <div class="row">
+       <div class="form-group col-md-4">
+         <label for="city" class="col-form-label">City: </label>
+         <input type="text" id="city" class="form-control" placeholder="City">
+       </div>
+       <div class="form-group col-md-4">
+         <label for="type" class="col-form-label">Type: </label>
+         <input type="text" id="type" class="form-control" placeholder="Type">
+       </div>
+       <div class="form-group col-md-4">
+         <label for="cuisine" class="col-form-label">Cuisine: </label>
+         <input type="text" id="cuisine" class="form-control" placeholder="Cuisine">
+       </div>
+     </div>
+     <div class="row">
+       <div class="form-group  col-md-12">
+         <label for="place-name" class="col-form-label">Name: </label>
+         <input type="text" class="form-control" id="place-name" placeholder="Name">
+       </div>
+     </div>
+ </form>
  {{#each data}}
-   <div class="restaurant">
-     <h2>{{name}}</h2>
-     <img src="{{image._downloadURL}}" alt="">
-   </div>
+    <ul class="page list-unstyled">
+ +    <li class="restaurant row bg-warning">
+ +      <div class="restaurant-image col-md-2">
+ +        <img src="{{image._downloadURL}}" class="img-responsive center-block" alt="">
+ +      </div>
+ +      <div class="main-info col-md-6">
+ +        <h3><strong>{{name}}</strong></h3>
+ +        <p class="bigger-font">Restaurant</p>
+ +        <div class="bottom-align-text">
+ +          <p>Italian cuisine</p>
+ +          <p>Sofia</p>
+ +        </div>
+ +      </div>
+ +      <div class="side-info col-md-4">
+ +        <div class="rating-info">
+ +          <img src="./images/star.png" class="img-responsive star-image">
+ +          <span>4/5 stars</span>
+ +        </div>
+ +        <button class="add-to-favourites btn btn-default">Add to favourites</button>
+ +      </div>
+ +    </li>   
+ +    <li class="restaurant row bg-warning">
+ +      <div class="restaurant-image col-md-2">
+ +        <img src="{{image._downloadURL}}" class="img-responsive center-block" alt="">
+ +      </div>
+ +      <div class="main-info col-md-6">
+ +        <h3><strong>{{name}}</strong></h3>
+ +        <p class="bigger-font">Restaurant</p>
+ +        <div class="bottom-align-text">
+ +          <p>Italian cuisine</p>
+ +          <p>Sofia</p>
+ +        </div>
+ +      </div>
+ +      <div class="side-info col-md-4">
+ +        <div class="rating-info">
+ +          <img src="./images/star.png" class="img-responsive star-image">
+ +          <span>4/5 stars</span>
+ +        </div>
+ +        <button class="add-to-favourites btn btn-default">Add to favourites</button>
+ +      </div>
+ +    </li>   
+ +  </ul>
  {{/each}}
  
  

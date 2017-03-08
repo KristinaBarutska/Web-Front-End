@@ -6,3 +6,37 @@
     color: red;
     font-size: 1.5em;
 }
+
+.restaurant {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.main-info {
+    height: 100%;
+}
+
+.main-info p {
+    margin: 0;
+}
+
+.main-info h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-align-text {
+    vertical-align: bottom;
+}
+
+.bigger-font {
+    font-size: 1.2em;
+}
+
+.side-info .star-image {
+    height: 2em;
+    display: inline-block;
+}

@@ -1,4 +1,5 @@
 import { controllers } from "controllers";
+import { attachEvents } from "events";
 
 (function() {
 
@@ -18,5 +19,5 @@ import { controllers } from "controllers";
 
 
     sammyApp.run('#/');
-
+    attachEvents();
 }());

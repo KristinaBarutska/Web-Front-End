@@ -11,6 +11,9 @@ let browse = (function() {
                 data = result;
                 return templates.get("browse");
             })
+            .catch(() => {
+                return templates.get("not-logged-in");
+            })
             .then((templateFunc) => {
                 context.$element().html(templateFunc({ data }));
             });

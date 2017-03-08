@@ -12,9 +12,7 @@ class Home {
             .then((template) => {
                 context.$element().html(template());
             })
-            .then(() => {
-                attachEvents();
-            });
+
     }
 
 }
