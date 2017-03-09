@@ -20,34 +20,8 @@
          <input type="text" class="form-control" id="place-name" placeholder="Name">
        </div>
      </div>
+     <button id="search-restaurants" class="btn btn-warning">Search</button>
  </form>
- {{#each data}}
-    <ul class="page list-unstyled">
-     <li class="restaurant row bg-warning">
-       <div class="restaurant-image col-md-2" data-id="{{_id}}">
-         <img src="{{image._downloadURL}}" class="img-responsive center-block" alt="">
-       </div>
-       <div class="main-info col-md-6">
-        <h3><a href="#/restaurant/{{_id}}" id="restaurant-profile"><strong>{{name}}</strong></a></h3>
-         <p class="bigger-font">{{type}}</p>
-         <div class="bottom-align-text">
-           <p>
-             Cuisine:
-             {{#each cuisine}}
-               <span> {{this}} </span>
-             {{/each}}
-           </p>
-           <p class="top-margin">{{city}}</p>
-         </div>
-       </div>
-       <div class="side-info col-md-4">
-         <div class="rating-info">
-           <img src="./images/star.png" class="img-responsive star-image">
-           <span>{{rating}}/5 stars</span>
-         </div>
-        <button class="add-to-favourites btn btn-warning">Add to favourites</button>
-       </div>
-     </li>   
-   </ul>
- {{/each}}
+  <ul id="restaurants-list" class="list-unstyled">
+  </ul>
  </div>
