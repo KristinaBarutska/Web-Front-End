@@ -36,7 +36,21 @@
     font-size: 1.2em;
 }
 
-.side-info .star-image {
+.star-image {
     height: 2em;
     display: inline-block;
+}
+
+.main-info .top-margin {
+    margin-top: 1em;
+}
+
+.top-margin {
+    margin-top: 1em;
+}
+
+.restaurant-profile-image {
+    display: block;
+    height: 15em;
+    margin-bottom: 2em;
 }

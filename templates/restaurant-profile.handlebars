@@ -1,0 +1,30 @@
+<div class="container restaurant-profile" data-id="{{_id}}">
+     <div class="">
+         <img src="{{image._downloadURL}}" class="restaurant-profile-image" alt="">
+     </div>
+     <div class="row">
+         <div class="restaurant-profile-main col-md-6 center-block">
+             <h4><strong>{{name}}</strong></h4>
+             <p class="bigger-font lead">{{type}}</p>
+ 
+             <div class="restaurant-description">
+                 <p class="bg-warning bigger-font">{{description}}</p>
+             </div>
+ 
+             <div class="bottom-align-text">
+                 <p>
+                     Cuisine: {{#each cuisine}}
+                     <span> {{this}} </span> {{/each}}
+                 </p>
+                 <p class="top-margin">{{city}}</p>
+             </div>
+         </div>
+         <div class="restaurant-profile-side col-md-4 center-block">
+             <div class="rating-info">
+                 <img src="./images/star.png" class="img-responsive star-image">
+                 <span>{{rating}}/5 stars</span>
+             </div>
+             <button class="add-to-favourites btn btn-warning">Add to favourites</button>
+         </div>
+     </div>
+ </div>

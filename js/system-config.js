@@ -15,6 +15,7 @@ SystemJS.config({
         'jquery-requester': './js/data/jquery-requester.js',
         'requester': './js/data/requester.js',
         'events': './js/controllers/events.js',
-        'register-controller': './js/controllers/register.js'
+        'register-controller': './js/controllers/register.js',
+        'restaurant-profile': './js/controllers/restaurant-profile.js'
     }
 });
