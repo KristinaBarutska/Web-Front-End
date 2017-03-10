@@ -38,7 +38,7 @@ var requester = (function() {
 
     function logoutUserRequest(username, password) {
         const data = { username, password };
-        var authtoken = localStorage.getItem(AUTH_TOKEN);
+        const authtoken = localStorage.getItem(AUTH_TOKEN);
         const headers = { Authorization: `Kinvey ${authtoken}` };
         return jqueryRequester.post(logoutUserUrl, headers, data)
             .then(() => {
@@ -59,9 +59,16 @@ var requester = (function() {
     }
 
     function getAllRestaurants() {
-        var authtoken = localStorage.getItem(AUTH_TOKEN);
+        const authtoken = localStorage.getItem(AUTH_TOKEN);
         const headers = { Authorization: `Kinvey ${authtoken}` };
         return jqueryRequester.get(getRestaurantsUrl, headers);
+    }
+
+    function getRestaurantById(id) {
+        const authtoken = localStorage.getItem(AUTH_TOKEN);
+        const headers = { Authorization: `Kinvey ${authtoken}` };
+        const url = getRestaurantsUrl + `/${id}`;
+        return jqueryRequester.get(url, headers);
     }
 
     return {
@@ -69,7 +76,8 @@ var requester = (function() {
         loginUser: loginUserRequest,
         logoutUser: logoutUserRequest,
         isLoggedIn: isLoggedIn,
-        getAllRestaurants: getAllRestaurants
+        getAllRestaurants: getAllRestaurants,
+        getRestaurantById: getRestaurantById
     };
 }());
 
