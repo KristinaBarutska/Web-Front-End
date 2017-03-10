@@ -24,9 +24,14 @@ var jqueryRequester = (function() {
         return request("GET", url, headers, data, contentType);
     }
 
+    function put(url, headers, data, contentType) {
+        return request("PUT", url, headers, data, contentType);
+    }
+
     return {
         get,
-        post
+        post,
+        put
     };
 }());
 
