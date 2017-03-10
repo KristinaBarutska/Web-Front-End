@@ -4,16 +4,16 @@ var requester = (function() {
     const CURRENT_USER_ID = "current-user-id";
     const AUTH_TOKEN = "auth-token";
     const CURRENT_USER_NAME = "username";
-    const appId = "kid_ryOQxnRFl";
-    const appSecret = "cadb39eed8ef4d86bcb230484ccf0b80";
-    const masterSecret = "41da989e3d204611aa8411e752e50420";
+    const appId = "kid_rJWkfzw6";
+    const appSecret = "9861c3e41b4a41e4976d17e5c48f8e26";
+    const masterSecret = "039e3c57e4474187aa9c5b6d540c13e1";
     var authorizationString = `${appId}:${appSecret}`;
     authorizationString = btoa(authorizationString);
 
 
     const url = "https://baas.kinvey.com";
     const getUrl = url + appId;
-    const userUrl = url + `/user/${appId}/`;
+    const userUrl = url + `/user/${appId}`;
     const loginUserUrl = userUrl + "login";
     const logoutUserUrl = userUrl + "_logout";
     const getRestaurantsUrl = url + `/appdata/${appId}/restaurants`;
@@ -29,7 +29,6 @@ var requester = (function() {
         const headers = { Authorization: `Basic ${authorizationString}` };
         return jqueryRequester.post(loginUserUrl, headers, data)
             .then((res) => {
-                console.log(res);
                 localStorage.setItem(CURRENT_USER_ID, res._id);
                 localStorage.setItem(AUTH_TOKEN, res._kmd.authtoken);
                 localStorage.setItem(CURRENT_USER_NAME, res.username);
@@ -58,16 +57,14 @@ var requester = (function() {
         });
     }
 
-    function getUserFavourites() {
+
+    function getUserInfo() {
         const id = localStorage.getItem(CURRENT_USER_ID);
         const url = userUrl + `/${id}`;
-        console.log(url);
         const authtoken = localStorage.getItem(AUTH_TOKEN);
         const headers = { Authorization: `Kinvey ${authtoken}` };
-        return jqueryRequester.get(url, headers)
-            .then((user) => {
-                return user.favourites;
-            });
+
+        return jqueryRequester.get(url, headers);
     }
 
     function addRestaurantToFavourites(restaurantId) {
@@ -76,8 +73,10 @@ var requester = (function() {
         const headers = { Authorization: `Kinvey ${authtoken}` };
         const url = userUrl + `/${userId}`;
         var newFavourites;
-        return getUserFavourites()
-            .then((favourites) => {
+
+        return getUserInfo()
+            .then((user) => {
+                var favourites = user.favourites;
                 newFavourites = favourites;
                 if (newFavourites.indexOf(restaurantId) < 0) {
                     newFavourites.push(restaurantId);
@@ -109,8 +108,8 @@ var requester = (function() {
         loginUser: loginUserRequest,
         logoutUser: logoutUserRequest,
         isLoggedIn: isLoggedIn,
+        getUserInfo: getUserInfo,
         getAllRestaurants: getAllRestaurants,
-        getUserFavourites: getUserFavourites,
         getRestaurantById: getRestaurantById,
         addRestaurantToFavourites: addRestaurantToFavourites
     };
