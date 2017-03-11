@@ -3,12 +3,12 @@
          <img src="{{image._downloadURL}}" class="restaurant-profile-image" alt="">
      </div>
      <div class="row">
-         <div class="restaurant-profile-main col-md-6 center-block">
+         <div class="restaurant-profile-main col-md-4 center-block">
              <h4><strong>{{name}}</strong></h4>
              <p class="bigger-font lead">{{type}}</p>
  
              <div class="restaurant-description">
-                 <p class="bg-warning bigger-font">{{description}}</p>
+                 <p class="bg-warning bigger-font">{{description.description}}</p>
              </div>
  
              <div class="bottom-align-text">
@@ -27,4 +27,27 @@
              <button class="add-to-favourites btn btn-warning">Add to favourites</button>
          </div>
      </div>
+     <div id="comment-section" class="comment-section">
+        {{#if comments.length}}
+         {{#each comments}}
+            <div class="comment">
+                 <div class="comment-user"><strong>{{username}}: </strong></div>
+                 <div class="comment-content bigger-font">{{content}}</div>
+                 <div class="comment-date smaller-font">{{date}}</div>
+              </div>
+         {{/each}}
+         {{else}}
+             <div><strong class="bigger-font">No comments to show</strong></div>
+         {{/if}}
+         <div>
+             <form class="add-comment-form" action="post">
+                <div class="form-group">
+                  <label for="new-comment">Comment:</label>
+                  <textarea class="form-control" id="new-comment" rows="3"></textarea>
+                </div>
+                <button id="add-comment-btn" type="submit" class="btn btn-success">Add</button>
+             </form>
+         </div>
+     </div>
+  </div>
  </div>

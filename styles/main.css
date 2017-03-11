@@ -36,6 +36,10 @@
     font-size: 1.2em;
 }
 
+.smaller-font {
+    font-size: 0.7em;
+}
+
 .star-image {
     height: 2em;
     display: inline-block;
@@ -53,4 +57,25 @@
     display: block;
     height: 15em;
     margin-bottom: 2em;
+}
+
+.comment-section {
+    margin: 2em;
+}
+
+.restaurant-profile-main {
+    display: inline-block;
+}
+
+.comment {
+    border: 1px solid black;
+    padding: 1.5em;
+}
+
+.comment-content {
+    margin-bottom: 1.2em;
+}
+
+.add-comment-form {
+    margin-top: 2em;
 }
