@@ -43,7 +43,7 @@ var requester = (function() {
         const data = { username, password };
         var authtoken = localStorage.getItem(AUTH_TOKEN);
         const headers = { Authorization: `Kinvey ${authtoken}` };
-        return jqueryRequester.post(logoutUserUrl, headers, data)
+        return jqueryRequester.post(logoutUserUrl, headers)
             .then(() => {
 
                 localStorage.removeItem(CURRENT_USER_ID);

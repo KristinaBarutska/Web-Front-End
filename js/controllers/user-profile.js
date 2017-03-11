@@ -21,6 +21,10 @@ var userProfile = (function() {
                 var length = userInfo.favourites.length;
                 var itemsProcessed = 0;
                 return new Promise((resolve, reject) => {
+                    if (userInfo.favourites.length === 0) {
+                        resolve(allRestaurants);
+                        return;
+                    }
                     userInfo.favourites.forEach((id) => {
                         requester.getRestaurantById(id)
                             .then((restaurant) => {

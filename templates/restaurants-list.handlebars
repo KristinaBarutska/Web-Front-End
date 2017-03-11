@@ -1,3 +1,4 @@
+ {{#if data.length}}
  {{#each data}}
      <li class="restaurant row bg-warning" data-id="{{_id}}">
        <div class="restaurant-image col-md-2">
@@ -25,3 +26,6 @@
        </div>
      </li>
      {{/each}} 
+     {{else}}
+       <h3>No restaurant or cafés to show.</h3>
+     {{/if}}
