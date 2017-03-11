@@ -1,0 +1,20 @@
+        {{#if comments.length}}
+         {{#each comments}}
+             <div class="comment">
+                 <div class="comment-user"><strong>{{username}}: </strong></div>
+                 <div class="comment-content bigger-font">{{content}}</div>
+                 <div class="comment-date smaller-font">{{date}}</div>
+              </div>
+         {{/each}}
+         {{else}}
+             <div><strong class="bigger-font">No comments to show</strong></div>
+        {{/if}}
+         <div>
+             <form class="add-comment-form" action="post">
+               <div class="form-group">
+                  <label for="new-comment">Comment:</label>
+                 <textarea class="form-control" id="new-comment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success add-comment-btn">Add</button>
+             </form>
+         </div>

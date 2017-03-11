@@ -105,6 +105,24 @@ var requester = (function() {
             });
     }
 
+    function addCommentToRestaurant(id, content) {
+        const authtoken = localStorage.getItem(AUTH_TOKEN);
+        const headers = { Authorization: `Kinvey ${authtoken}` };
+        const url = getRestaurantsUrl + `/${id}`;
+        const username = localStorage.getItem(CURRENT_USER_NAME);
+        var dateNow = new Date();
+        var date = `${dateNow.getDate()}.${dateNow.getMonth()}.${dateNow.getFullYear()}`;
+
+        return getRestaurantById(id)
+            .then((restaurant) => {
+                restaurant.comments.push({ content, date, username });
+                return restaurant;
+            })
+            .then((restaurant) => {
+                return jqueryRequester.put(url, headers, restaurant);
+            });
+    }
+
 
     return {
         registerUser: registerUserRequest,
@@ -114,7 +132,8 @@ var requester = (function() {
         getUserInfo: getUserInfo,
         getAllRestaurants: getAllRestaurants,
         getRestaurantById: getRestaurantById,
-        addRestaurantToFavourites: addRestaurantToFavourites
+        addRestaurantToFavourites: addRestaurantToFavourites,
+        addCommentToRestaurant: addCommentToRestaurant
     };
 }());
 
