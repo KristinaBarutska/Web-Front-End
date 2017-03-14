@@ -2,9 +2,39 @@
     display: none;
 }
 
-.red {
-    color: red;
-    font-size: 1.5em;
+#nav-container {
+    height: 230px;
+    background-color: #452917;
+    padding-top: 15px;
+    padding-left: 110px;
+    padding-right: 0;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+#menu-content {
+    background-color: #938c7b;
+    color: #eee4ba;
+}
+
+#menu-content ul li a {
+    color: #eee4ba;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#user-links a {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+#menu-content ul li :hover {
+    background-color: #938c7b;
+    color: white;
 }
 
 .restaurant {
