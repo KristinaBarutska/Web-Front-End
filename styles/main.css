@@ -17,6 +17,8 @@
 #menu-content {
     background-color: #938c7b;
     color: #eee4ba;
+    padding: 0;
+    height: 64px;
 }
 
 #menu-content ul li a {
@@ -24,6 +26,11 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     font-style: italic;
+}
+
+#menu-content img {
+    float: left;
+    margin: 0;
 }
 
 #user-links a {
