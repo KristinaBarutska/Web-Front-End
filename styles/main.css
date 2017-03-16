@@ -1,13 +1,24 @@
+@font-face {
+    font-family: LegueGothic;
+    src: url(fonts/LeagueGothic-Regular.otf);
+}
+
 .hidden {
     display: none;
 }
 
 #nav-container {
-    height: 230px;
-    background-color: #452917;
+    height: 254px;
+    background-image: url("/images/top.png");
+    background-repeat: repeat-x;
     padding-top: 15px;
     padding-left: 110px;
     padding-right: 0;
+}
+
+#nav-container h2 {
+    font-family: LegueGothic;
+    font-style: bold;
 }
 
 .navbar {
@@ -15,10 +26,15 @@
 }
 
 #menu-content {
-    background-color: #938c7b;
+    background-image: url("/images/menu.png");
     color: #eee4ba;
     padding: 0;
-    height: 64px;
+    height: 60px;
+}
+
+#menu-content ul {
+    float: right;
+    padding-right: 50px;
 }
 
 #menu-content ul li a {
@@ -42,6 +58,22 @@
 #menu-content ul li :hover {
     background-color: #938c7b;
     color: white;
+}
+
+#logout {
+    background-image: url("/images/buttonsmall.png");
+    background-color: transparent;
+    border: none;
+    width: 85px;
+    height: 35px;
+    margin-right: 70px;
+    margin-top: 30px
+}
+
+#logout span {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 .restaurant {

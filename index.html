@@ -17,10 +17,13 @@
         <div id="nav-container" class="container-fluid">
             <div id="menu-content">
                 <nav id="navbar" class="navbar">
-                    <img src="./images/logo.png" alt="logo">
+
                     <ul class="nav navbar-nav">
                         <li><a class="active" href="#/home">Home <span class="sr-only">(current)</span></a></li>
                         <li><a href="#/browse">Browse</a></li>
+                        <li>
+                            <a id="user-profile-link" href="#/profile" class="nav-link"></a>
+                        </li>
                     </ul>
                     <form id="login-form" class="navbar-form navbar-right">
                         <div class="form-group">
@@ -33,15 +36,17 @@
                         <span> or </span>
                         <a href="#/register" class="btn btn-default">Register</a>
                     </form>
-
-                    <form id="user-links" class="navbar-form navbar-right hidden">
-                        <a id="user-profile-link" href="#/profile" class="nav-link"></a>
-                        <button id="logout" class="btn btn-default">Logout</button>
-                    </form>
-
                 </nav>
-                <h2>Find the restaurants and cafés closest to you in one click</h2>
+                <h2>Find the restaurants and cafés <br> closest to you in one click</h2>
+                <div>
+                    Browse depending on your location and choose your browsing preferences.<br> Give up to 5 stars to places you've visited.<br> Comment to let others know your thoughts on the food, beverage, staff and atmoshere of the place.<br>
+
+                </div>
             </div>
+            <form id="user-links" class="navbar-form navbar-right hidden">
+
+                <button id="logout"><span>Logout</span></button>
+            </form>
         </div>
     </header>
     <main>
