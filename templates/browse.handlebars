@@ -1,26 +1,21 @@
 <div class="container">
   <form action="#/browse" method="GET">
      <div class="row">
-       <div class="form-group col-md-4">
-         <label for="city" class="col-form-label">City: </label>
-         <input type="text" id="city" name="city" class="form-control" placeholder="City">
+       <div class="form-group col-md-3">
+         <input type="text" id="city" name="city" class="input-form" placeholder="City">
        </div>
-       <div class="form-group col-md-4">
-         <label for="type" class="col-form-label">Type: </label>
-         <input type="text" id="type" name="type" class="form-control" placeholder="Type">
+       <div class="form-group col-md-3">
+         <input type="text" id="type" name="type" class="input-form" placeholder="Type">
        </div>
-       <div class="form-group col-md-4">
-         <label for="cuisine" class="col-form-label">Cuisine: </label>
-         <input type="text" id="cuisine" name="cuisine" class="form-control" placeholder="Cuisine">
+       <div class="form-group col-md-3">
+         <input type="text" id="cuisine" name="cuisine" class="input-form" placeholder="Cuisine">
+       </div>    
+       <div class="form-group  col-md-3">
+         <input type="text" class="input-form" id="place-name" name="place-name" placeholder="Name">
        </div>
+       <button id="search-restaurants" type="submit" class="butt"><span>Search</span></button>
      </div>
-     <div class="row">
-       <div class="form-group  col-md-12">
-         <label for="place-name" class="col-form-label">Name: </label>
-         <input type="text" class="form-control" id="place-name" name="place-name" placeholder="Name">
-       </div>
-     </div>
-     <button id="search-restaurants" type="submit" class="btn btn-warning">Search</button>
+     
  </form>
   <ul id="restaurants-list" class="list-unstyled">
   </ul>

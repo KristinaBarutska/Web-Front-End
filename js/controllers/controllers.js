@@ -1,7 +1,6 @@
 "use strict";
 
 import { Home } from "home";
-import { users } from "users";
 import { browse } from "browse";
 import { registerController } from "register-controller";
 import { restaurantProfile } from "restaurant-profile";

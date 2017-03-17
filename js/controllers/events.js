@@ -5,6 +5,7 @@ let attachEvents = function() {
     requester.isLoggedIn()
         .then((username) => {
             $("#login-form").addClass("hidden");
+            $("#login-div").addClass("hidden");
             $("#user-links").removeClass("hidden");
             $("#user-profile-link").html(`Hello, ${username}`);
         });

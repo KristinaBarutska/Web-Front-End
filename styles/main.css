@@ -7,6 +7,10 @@
     display: none;
 }
 
+body {
+    background-color: #f4f2d9;
+}
+
 #nav-container {
     height: 254px;
     background-image: url("/images/top.png");
@@ -37,16 +41,15 @@
     padding-right: 50px;
 }
 
+#register,
 #menu-content ul li a {
     color: #eee4ba;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
-    font-style: italic;
 }
 
-#menu-content img {
-    float: left;
-    margin: 0;
+#register {
+    color: #938c7b;
 }
 
 #user-links a {
@@ -60,20 +63,34 @@
     color: white;
 }
 
-#logout {
+.butt {
     background-image: url("/images/buttonsmall.png");
     background-color: transparent;
     border: none;
     width: 85px;
     height: 35px;
-    margin-right: 70px;
-    margin-top: 30px
 }
 
-#logout span {
+.butt span {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
+}
+
+#login-div {
+    background-image: url("/images/login-div.png");
+    height: 78px;
+}
+
+.input-form {
+    background-image: url("/images/input-field.png");
+    width: 168px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+}
+
+#login-inline {
+    margin-right: 110px;
 }
 
 .restaurant {
