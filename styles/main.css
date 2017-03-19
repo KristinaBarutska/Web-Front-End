@@ -13,6 +13,7 @@ body {
 
 #nav-container {
     height: 254px;
+    width: 100%;
     background-image: url("/images/top.png");
     background-repeat: repeat-x;
     padding-top: 15px;
@@ -23,6 +24,11 @@ body {
 #nav-container h2 {
     font-family: LegueGothic;
     font-style: bold;
+}
+
+#restaurant-profile h3 {
+    font-family: LegueGothic;
+    color: #442917;
 }
 
 .navbar {
@@ -67,13 +73,20 @@ body {
     background-image: url("/images/buttonsmall.png");
     background-color: transparent;
     border: none;
-    width: 85px;
-    height: 35px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 87px;
+}
+
+#search-restaurants {
+    padding: 0;
 }
 
 .butt span {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 #login-div {
@@ -83,10 +96,15 @@ body {
 
 .input-form {
     background-image: url("/images/input-field.png");
-    width: 168px;
-    height: 35px;
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-color: transparent;
     border: none;
+    padding: 15px;
+}
+
+.padding-15 {
+    padding: 15px;
 }
 
 #login-inline {
@@ -94,24 +112,11 @@ body {
 }
 
 .restaurant {
-    border: 1px solid black;
     padding: 1em;
     margin: 1em;
     display: flex;
     align-items: center;
-}
-
-.main-info {
-    height: 100%;
-}
-
-.main-info p {
-    margin: 0;
-}
-
-.main-info h3 {
-    padding: 0;
-    margin: 0;
+    background-color: transparent;
 }
 
 .bottom-align-text {
@@ -141,8 +146,20 @@ body {
 
 .restaurant-profile-image {
     display: block;
-    height: 15em;
+    height: 20em;
     margin-bottom: 2em;
+}
+
+.restaurant-image {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 5px 5px 0px#888888;
+    height: 10em;
+}
+
+.restaurant-image img {
+    border: 5px solid white;
+    height: 10em;
 }
 
 .comment-section {
