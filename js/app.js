@@ -9,7 +9,7 @@ import { attachEvents } from "events";
             context.redirect('#/home');
         });
 
-        this.get('#/home', controllers.home.all);
+        this.get('#/home', controllers.map.all);
 
         this.get("#/browse", controllers.browse.all);
 
@@ -19,7 +19,6 @@ import { attachEvents } from "events";
 
         this.get("#/profile", controllers.userProfile.all);
 
-        this.get("#/map", controllers.map.all);
 
     });
 

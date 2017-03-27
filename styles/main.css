@@ -19,6 +19,10 @@ body {
     padding: 15px;
 }
 
+#map {
+     height: 200px;
+}
+
 #nav-container {
     height: 254px;
     width: 100%;

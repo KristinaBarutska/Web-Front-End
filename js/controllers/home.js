@@ -7,7 +7,8 @@ let home = (function() {
         templates.get("home")
             .then((template) => {
                 context.$element().html(template());
-            });
+            })
+
     }
 
     return {
