@@ -16,6 +16,7 @@ SystemJS.config({
         'events': './js/controllers/events.js',
         'register-controller': './js/controllers/register.js',
         'restaurant-profile': './js/controllers/restaurant-profile.js',
-        'user-profile': './js/controllers/user-profile.js'
+        'user-profile': './js/controllers/user-profile.js',
+        'map': './js/controllers/map.js'
     }
 });

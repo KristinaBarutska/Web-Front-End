@@ -19,6 +19,8 @@ import { attachEvents } from "events";
 
         this.get("#/profile", controllers.userProfile.all);
 
+        this.get("#/map", controllers.map.all);
+
     });
 
 

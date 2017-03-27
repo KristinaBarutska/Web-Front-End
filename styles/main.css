@@ -11,6 +11,14 @@ body {
     background-color: #f4f2d9;
 }
 
+::-moz-placeholder {
+    padding: 10px;
+}
+
+::-webkit-input-placeholder {
+    padding: 15px;
+}
+
 #nav-container {
     height: 254px;
     width: 100%;
@@ -26,9 +34,15 @@ body {
     font-style: bold;
 }
 
-#restaurant-profile h3 {
+#restaurant-profile {
     font-family: LegueGothic;
     color: #442917;
+}
+
+.main-info p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #938c7b;
+    font-style: italic;
 }
 
 .navbar {
@@ -96,11 +110,16 @@ body {
 
 .input-form {
     background-image: url("/images/input-field.png");
-    background-size: 100%;
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    padding: 15px;
+    height: 38px;
+    width: 170px;
+    padding-top: 15px;
+}
+
+.col-md-3 {
+    padding: 0;
 }
 
 .padding-15 {
