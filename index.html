@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Restaurants</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.css">
     <link rel="stylesheet" href="./bower_components/toastr/toastr.css">
     <link rel="stylesheet" href="./bower_components/jquery-ui/themes/base/all.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" media="screen, handheld" />
+    <link rel="stylesheet" type="text/css" href="./styles/enhanced.css" media="screen  and (min-width: 40.5em)" />
 </head>
 
 <body>
@@ -17,25 +19,22 @@
         <div id="nav-container" class="container-fluid">
             <div id="menu-content">
                 <nav id="navbar" class="navbar">
-
-                    <ul class="nav navbar-nav">
-                        <li><a class="active" href="#/home">Home <span class="sr-only">(current)</span></a></li>
+                    <ul class="navbar-nav">
+                        <li><a href="#/home">Home</a></li>
                         <li><a href="#/browse">Browse</a></li>
                         <li>
                             <a id="user-profile-link" href="#/profile" class="nav-link"></a>
                         </li>
                     </ul>
-
                 </nav>
-                <h2>Find the restaurants and cafés <br> closest to you in one click</h2>
-                <div>
-                    Browse depending on your location and choose your browsing preferences.<br> Give up to 5 stars to places you've visited.<br> Comment to let others know your thoughts on the food, beverage, staff and atmoshere of the place.<br>
-
+                <div id="description">
+                    <h2>Find the restaurants and cafés <br> closest to you in one click</h2>
+                    <div>
+                        Browse depending on your location and choose your browsing preferences.<br> Give up to 5 stars to places you've visited.<br> Comment to let others know your thoughts on the food, beverage, staff and atmoshere of the place.
+                    </div>
                 </div>
             </div>
-            <form id="user-links" class="navbar-form navbar-right hidden">
-                <button class="butt"><span>Logout</span></button>
-            </form>
+
         </div>
 
         <div id="login-div">
@@ -52,6 +51,9 @@
                 </div>
             </form>
         </div>
+        <form id="user-links" class="navbar-form navbar-right hidden">
+            <button id="logout" class="butt"><span>Logout</span></button>
+        </form>
     </header>
     <main>
 

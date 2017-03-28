@@ -26,7 +26,7 @@ body {
 
 #map {
     height: 25em;
-    border: 0.5em solid white;
+    border: 0.5em solid red;
     box-shadow: 0 0.5em 0.5em #888888;
     margin-bottom: 1em;
 }
@@ -36,50 +36,18 @@ body {
     background-image: url("/images/top.png");
     background-repeat: repeat-x;
     padding-top: 1em;
-    padding-left: 2em;
+    padding-left: 4em;
     padding-right: 0;
     margin-right: 0em;
-}
-
-#nav-container h2 {
-    font-family: LegueGothic;
-    font-style: bold;
-    font-size: 1.7em;
-    float: left;
-    margin-top: 0;
 }
 
 #description {
     float: left;
 }
 
-.navbar {
-    border-radius: 0;
-}
-
-#navbar {
-    margin: 0;
-}
-
-#navbar li {
-    float: left;
-}
-
-#navbar li a {
-    display: block;
-    padding: 1em;
-    text-align: center;
-}
-
-#menu-content {
-    background-color: grey;
-    color: #eee4ba;
-    padding: 0;
-    height: 3em;
-}
-
-#logout {
-    float: right;
+#nav-container h2 {
+    font-family: LegueGothic;
+    font-style: bold;
     margin-top: 1em;
 }
 
@@ -92,6 +60,22 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #938c7b;
     font-style: italic;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+#menu-content {
+    background-image: url("/images/menu.png");
+    color: #eee4ba;
+    padding: 0;
+    height: 4em;
+}
+
+#menu-content ul {
+    float: right;
+    padding-right: 4em;
 }
 
 #register,
@@ -138,8 +122,7 @@ body {
 }
 
 #login-div {
-    height: 9em;
-    margin-left: 2em;
+    background-image: url("/images/login-div.png");
 }
 
 .input-form {
@@ -155,11 +138,6 @@ body {
 
 #username-register {
     margin-top: 1em;
-}
-
-#username,
-#password {
-    margin-bottom: 0.5em;
 }
 
 .col-md-3 {
