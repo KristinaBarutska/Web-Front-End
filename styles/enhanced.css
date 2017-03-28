@@ -41,14 +41,14 @@ body {
     margin-right: 0em;
 }
 
-#description {
-    float: left;
-}
-
 #nav-container h2 {
     font-family: LegueGothic;
     font-style: bold;
     margin-top: 1em;
+}
+
+#description {
+    clear: both;
 }
 
 #restaurant-profile {
